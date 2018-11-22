@@ -59,6 +59,7 @@ public class IDReaderModule extends ReactContextBaseJavaModule implements Lifecy
 
     public IDReaderModule(ReactApplicationContext reactContext) {
         super(reactContext);
+        reactContext.addLifecycleEventListener(this);
         mContext=reactContext;
         Looper.prepare();
     }
